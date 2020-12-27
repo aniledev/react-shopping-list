@@ -12,13 +12,15 @@ import react from "react";
 export default class App extends React.Component {
   // initialize state for App component because its the lowest common ancestor of the components that update and read state
   state = {
-    ShoppingItems: [
+    shoppingItems: [
       { name: "apples", checked: false },
       { name: "oranges", checked: true },
       { name: "bread", checked: false },
     ],
   };
   render() {
+    const { shoppingItems } = this.state;
+
     return (
       <>
         <header>
@@ -29,7 +31,7 @@ export default class App extends React.Component {
             <AddItemForm />
           </section>
           <section>
-            <ShoppingItems />
+            <ShoppingList items={shoppingItems} />
           </section>
         </main>
       </>
