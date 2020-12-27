@@ -1,10 +1,6 @@
 import React from "react";
 
 export default function ShoppingItem(props) {
-  ShoppingItem.defaultProps = {
-    item: {},
-  };
-
   return (
     <li>
       <h2
@@ -19,3 +15,7 @@ export default function ShoppingItem(props) {
     </li>
   );
 }
+
+ShoppingItem.defaultProps = {
+  item: {},
+};
