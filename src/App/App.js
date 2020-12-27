@@ -1,7 +1,7 @@
 import "./App.css";
-import Form from "./Form";
-import ShoppingList from "./ShoppingList";
-import ShoppingItems from "./ShoppingItems";
+import Form from "../Form/Form";
+import ShoppingList from "../ShoppingList/ShoppingList";
+import ShoppingItems from "../ShoppingItems/ShoppingItems";
 
 function App() {
   return (
