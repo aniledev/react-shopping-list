@@ -1,5 +1,7 @@
 import React from "react";
 import ShoppingItem from "../ShoppingItems/ShoppingItems";
+import { shallow } from "enzyme";
+import toJson from "enzyme-to-json";
 
 // an individual item within the list that contains a check button and delete button. There will be 0 or more of these
 
