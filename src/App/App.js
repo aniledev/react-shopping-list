@@ -16,9 +16,15 @@ export default class App extends React.Component {
     ],
   };
 
-  handleDeleteItem(item) {
-    console.log("handle delete item called", { item });
-  }
+  handleDeleteItem = (item) => {
+    // create a new array for the shoppingItems that removes the deleted item
+    // use the filter method to create a new array where each item in the new array does equal the item passed in from the delete callback prop
+    const newItems = this.state.shoppingItem.filter((itm) => itm !== item);
+    // assign the this.state.shoppingItem to the new array that we have filtered
+    this.setState({
+      shoppingItem: newItems,
+    });
+  };
 
   handleCheckItem(item) {
     console.log("handle check item called", { item });
