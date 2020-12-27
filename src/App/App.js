@@ -23,10 +23,10 @@ export default class App extends React.Component {
 
     return (
       <>
-        <header>
+        <header className="header">
           <h1>Shopping List</h1>
         </header>
-        <main>
+        <main className="main">
           <section>
             <AddItemForm />
           </section>
