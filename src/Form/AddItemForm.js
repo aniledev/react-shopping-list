@@ -14,7 +14,7 @@ export default class AddItemForm extends React.Component {
   // buttons are not wired up, not functional yet
   render() {
     return (
-      <form className="form">
+      <form className="form" onSubmit={this.onSubmitForm}>
         <label htmlFor="add" className="add-form" id="add-form">
           Add Item
         </label>

@@ -18,7 +18,7 @@ export default class App extends React.Component {
 
   // DON'T FORGET THE USE OF ARROW FUNCTIONS SO WE AVOID UNDEFINED ERRORS
   handleDeleteItem = (item) => {
-    // create a new array for the shoppingItems that removes the deleted item
+    // create a new array for the shoppingItem that removes the deleted item
     // use the filter method to create a new array where each item in the new array does equal the item passed in from the delete callback prop
     const newItems = this.state.shoppingItem.filter((itm) => itm !== item);
     // assign the this.state.shoppingItem to the new array that we have filtered
@@ -42,8 +42,16 @@ export default class App extends React.Component {
     });
   };
 
+  // use the spread operator to create a new array with the new object added to the array
   handleAddItem = (itemName) => {
-    console.log("handle add item", { itemName });
+    const newItems = [
+      ...this.state.shoppingItem,
+      { name: itemName, checked: false },
+    ];
+    // use this.setState to set the new created array as the new state
+    this.setState({
+      shoppingItem: newItems,
+    });
   };
 
   render() {

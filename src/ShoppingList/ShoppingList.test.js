@@ -19,7 +19,7 @@ describe("ShoppingList Component", () => {
   });
 
   // it should render multiple items when supplied with a proper array of items
-  it("should render ShoppingItems when supplied with an items prop", () => {
+  it("should render ShoppingItem when supplied with an items prop", () => {
     const testItems = [
       { name: "test item 1", checked: false },
       { name: "another test item", checked: true },
