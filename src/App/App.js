@@ -9,14 +9,14 @@ import ShoppingList from "../ShoppingList/ShoppingList";
 export default class App extends React.Component {
   // initialize state for App component because its the lowest common ancestor of the components that update and read state
   state = {
-    shoppingItems: [
+    ShoppingItem: [
       { name: "apples", checked: false },
       { name: "oranges", checked: true },
       { name: "bread", checked: false },
     ],
   };
   render() {
-    const { shoppingItems } = this.state;
+    const { ShoppingItem } = this.state;
     // pass this state down as props to the ShoppingList component
     return (
       <>
@@ -28,7 +28,7 @@ export default class App extends React.Component {
             <AddItemForm />
           </section>
           <section>
-            <ShoppingList items={shoppingItems} />
+            <ShoppingList items={ShoppingItem} />
           </section>
         </main>
       </>
