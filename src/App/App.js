@@ -16,6 +16,7 @@ export default class App extends React.Component {
     ],
   };
 
+  // DON'T FORGET THE USE OF ARROW FUNCTIONS SO WE AVOID UNDEFINED ERRORS
   handleDeleteItem = (item) => {
     // create a new array for the shoppingItems that removes the deleted item
     // use the filter method to create a new array where each item in the new array does equal the item passed in from the delete callback prop
