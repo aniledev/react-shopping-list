@@ -8,7 +8,12 @@ export default function ShoppingList(props) {
     <ul>
       {/* map over each item in the props that are passed down and create a ShoppingItem component for each one */}
       {props.items.map((item, index) => (
-        <ShoppingItem key={index} item={item} />
+        <ShoppingItem
+          key={index}
+          item={item}
+          onDeleteItem={props.onDeleteItem}
+          onCheckItem={props.onCheckItem}
+        />
       ))}
     </ul>
   );
