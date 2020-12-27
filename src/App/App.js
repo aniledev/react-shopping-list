@@ -9,14 +9,23 @@ import ShoppingList from "../ShoppingList/ShoppingList";
 export default class App extends React.Component {
   // initialize state for App component because its the lowest common ancestor of the components that update and read state
   state = {
-    ShoppingItem: [
+    shoppingItem: [
       { name: "apples", checked: false },
       { name: "oranges", checked: true },
       { name: "bread", checked: false },
     ],
   };
+
+  handleDeleteItem() {
+    console.log("handle delete item called");
+  }
+
+  handleCheckItem() {
+    console.log("handle check item called");
+  }
+
   render() {
-    const { ShoppingItem } = this.state;
+    const { shoppingItem } = this.state;
     // pass this state down as props to the ShoppingList component
     return (
       <>
@@ -28,7 +37,12 @@ export default class App extends React.Component {
             <AddItemForm />
           </section>
           <section>
-            <ShoppingList items={ShoppingItem} />
+            {/* add the two callback props to the component */}
+            <ShoppingList
+              items={shoppingItem}
+              onDeleteItem={this.handleDeleteItem}
+              onCheckItem={this.handleCheckItem}
+            />
           </section>
         </main>
       </>
