@@ -4,6 +4,7 @@ export default function ShoppingItem(props) {
   return (
     <li>
       <h2
+        // use a ternary operator; if the props.item.checked evalutes to true then apply the line-through text-declaraction, if it doesn't evaluate to true then apply null
         style={{
           textDecoration: props.item.checked ? "line-through" : null,
         }}
