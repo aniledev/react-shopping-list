@@ -42,6 +42,10 @@ export default class App extends React.Component {
     });
   };
 
+  handleAddItem = (itemName) => {
+    console.log("handle add item", { itemName });
+  };
+
   render() {
     const { shoppingItem } = this.state;
     // pass this state down as props to the ShoppingList component
@@ -52,7 +56,7 @@ export default class App extends React.Component {
         </header>
         <main className="main">
           <section>
-            <AddItemForm />
+            <AddItemForm onAddItem={this.handleAddItem} />
           </section>
           <section>
             {/* add the two callback props to the component */}
