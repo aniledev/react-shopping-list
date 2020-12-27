@@ -19,6 +19,20 @@ export default class App extends React.Component {
     ],
   };
   render() {
-    return <div></div>;
+    return (
+      <>
+        <header>
+          <h1>Shopping List</h1>
+        </header>
+        <main>
+          <section>
+            <AddItemForm />
+          </section>
+          <section>
+            <ShoppingItems />
+          </section>
+        </main>
+      </>
+    );
   }
 }
