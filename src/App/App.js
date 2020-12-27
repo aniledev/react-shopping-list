@@ -26,9 +26,20 @@ export default class App extends React.Component {
     });
   };
 
-  handleCheckItem(item) {
-    console.log("handle check item called", { item });
-  }
+  handleCheckItem = (item) => {
+    // use the map method to map over the current array
+    const newItems = this.state.shoppingItem.map((itm) => {
+      // if itm in the current state array is equal to the item passed in from the check callback props, toggle the boolean value of the map
+      if (itm === item) {
+        itm.checked = !itm.checked;
+      }
+      return itm;
+    });
+    // set the state with the new array
+    this.setState({
+      shoppingItem: newItems,
+    });
+  };
 
   render() {
     const { shoppingItem } = this.state;
