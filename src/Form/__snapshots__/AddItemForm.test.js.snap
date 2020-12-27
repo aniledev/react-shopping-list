@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddItemForm Component should render the complete form 1`] = `
+<form
+  className="form"
+>
+  <label
+    className="add-form"
+    htmlFor="add-item"
+    id="add-form"
+  >
+    Add Item
+  </label>
+  <input
+    aria-label="Shopping list item"
+    className="add-item"
+    id="add-item"
+    min={1}
+    placeholder="carrots"
+    type="text"
+  />
+  <button
+    type="submit"
+  >
+    Add Item
+  </button>
+</form>
+`;
