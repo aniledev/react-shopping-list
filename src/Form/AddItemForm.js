@@ -7,10 +7,6 @@ export default class AddItemForm extends React.Component {
   render() {
     return (
       <form className="form">
-        {/* 
-        label element, htmlFor attribute, classname, id
-        input element, name, id, classname, type, any validations
-        */}
         <label htmlFor="add-item" classname="add-form" id="add-form"></label>
         <input
           type="text"
