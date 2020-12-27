@@ -14,7 +14,7 @@ export default function ShoppingItem(props) {
       <button type="button" onClick={props.onCheckItem}>
         check
       </button>
-      <button type="button" onClick={props.DeleteItem}>
+      <button type="button" onClick={props.onDeleteItem}>
         delete
       </button>
     </li>
