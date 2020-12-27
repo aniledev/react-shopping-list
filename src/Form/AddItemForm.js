@@ -7,7 +7,9 @@ export default class AddItemForm extends React.Component {
   render() {
     return (
       <form className="form">
-        <label htmlFor="add-item" classname="add-form" id="add-form"></label>
+        <label htmlFor="add-item" className="add-form" id="add-form">
+          Add Item
+        </label>
         <input
           type="text"
           className="add-item"

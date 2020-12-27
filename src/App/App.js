@@ -20,7 +20,7 @@ export default class App extends React.Component {
   };
   render() {
     const { shoppingItems } = this.state;
-
+    // pass this state down as props to the ShoppingList component
     return (
       <>
         <header className="header">

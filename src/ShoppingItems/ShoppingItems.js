@@ -5,6 +5,10 @@ import React from "react";
 export default class ShoppingItems extends React.Component {
   render() {
     // make sure that each list item contains a key
-    return <div></div>;
+    return (
+      <div>
+        <p>Content</p>
+      </div>
+    );
   }
 }
